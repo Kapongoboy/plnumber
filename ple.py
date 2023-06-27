@@ -1,13 +1,13 @@
 import math
 import argparse
 
-def pi(n: int):
-    print(round(math.pi, n))
+def e(n: int):
+    print(round(math.e, n))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-            prog="pi printer",
-            description='print pi to the nth value',
+            prog="e printer",
+            description='print e to the nth value',
             )
 
     parser.add_argument(
@@ -17,6 +17,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     try:
-        pi(int(args.rounding))
+        e(int(args.rounding))
     except ValueError:
         print("please enter a valid number")
